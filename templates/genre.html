@@ -1,0 +1,23 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class="divider blue">
+	<div class="col-md-12"></div>
+</div>
+
+<h1>Choose a genre below or add a new genre</h1><br>
+
+
+	<a href="{{url_for('newGenre')}}">
+		<button id="new-genre" class="btn btn-default" id="new-album">
+			Add New Genre
+		</button>
+	</a>
+
+{% for genre in genres %}
+	<a href = "{{url_for('showAlbums', genre_id = genre.id)}}">
+		<h2>{{genre.name}}</h2>
+	</a>
+
+{% endfor %}
+{% endblock %}

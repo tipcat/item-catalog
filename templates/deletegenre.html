@@ -1,0 +1,22 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+<div class="divider blue">
+	<div class="col-md-12"></div>
+</div>
+
+<h2> Whoa, dude! <br><br><h3>Are you <em>sure</em> you want to delete the ENTIRE genre of {{genre.name}}?<br><br> This will delete all albums and cannot be undone!</h2>
+
+<form action="#" method = 'post'>
+	<br><br>
+
+	<button type="submit" class="btn btn-default delete" id="submit" type="submit">
+	<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Delete</button>
+
+</form>
+
+<br><br>
+
+<a href="javascript:history.back()"><strong>Cancel, get me out of here!</strong></a>
+{% endblock %}

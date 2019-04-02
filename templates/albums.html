@@ -1,0 +1,52 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+	<div class="divider blue">
+		<div class="col-md-12"></div>
+	</div>
+
+	<div class="row banner genre">
+		<div class="col-md-10 padding-1">
+
+			<h1>{{ genre.name }} albums</h1>
+			<br>
+	</div>
+
+</div>
+	<div class="row padding-top padding-bottom">
+	<div class="col-md-1"></div>
+		<div class="col-md-12 padding-1">
+
+			<a href="{{url_for('newAlbum', genre_id = genre.id )}}">
+				<button class="btn btn-default" id="new-album">
+					Add New Album
+				</button>
+			</a>
+						<a href="{{url_for('deleteGenre', genre_id = genre.id )}}">
+				<button class="btn btn-default delete" id="delete-genre">
+					Delete Genre
+				</button>
+			</a>
+		</div>
+		<div class="col-md-7"></div>
+	</div>
+
+{% if albums !=[] %}
+		<div class="row">
+			<div class="col-md-12 padding-1">
+
+					{% for album in albums %}
+
+							<div class="album">
+								<h3>{{album.artist}}, <em>{{album.title}}</em></h3>
+								<p>{{album.description}}</p>
+								<p class="album-price">{{album.price}}</p>
+								<a href='{{url_for('editAlbum', genre_id = genre.id, album_id=album.id ) }}'>Edit</a> |
+								<a href='{{url_for('deleteAlbum', genre_id = genre.id, album_id=album.id ) }}'>Delete</a>
+							</div>
+					{% endfor %}
+					{% endif %}
+			</div>
+		</div>
+	<br><br>
+{% endblock %}
