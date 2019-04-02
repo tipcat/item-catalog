@@ -8,7 +8,7 @@ Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
-email="tipcatdp@gmail.com"
+email = "tipcatdp@gmail.com"
 # Starter items to be added to databsse -- 8 albums in 6 genres
 
 # Indie Rock Albums

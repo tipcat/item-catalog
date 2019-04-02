@@ -206,7 +206,9 @@ def newGenre():
     if 'username' not in login_session:
         return redirect('/login')
     if request.method == 'POST':
-        newGenre = Genre(name=request.form['name'], creator=login_session['email'])
+        newGenre = Genre(
+            name=request.form['name'],
+            creator=login_session['email'])
         session.add(newGenre)
         session.commit()
         return redirect(url_for('showGenres'))
@@ -222,7 +224,9 @@ def deleteGenre(genre_id):
         return redirect('/login')
     genreToDelete = session.query(Genre).filter_by(id=genre_id).one()
     if genreToDelete.creator != login_session['email']:
-        return "<script> function myFunction() {alert('You may only delete a genre if you created it. Returning to catalog.'); window.location.href='/genre/'}</script><body onload='myFunction()'>"
+        return '''<script> function myFunction() {alert('You may only delete
+        a genre if you created it. Returning to catalog.');
+        window.location.href='/genre/'}</script><body onload='myFunction()'>'''
     if request.method == 'POST':
         session.delete(genreToDelete)
         session.commit()
@@ -275,7 +279,9 @@ def editAlbum(genre_id, album_id):
     editedAlbum = session.query(Album).filter_by(id=album_id).one()
     genre = session.query(Genre).filter_by(id=genre_id).one()
     if editedAlbum.creator != login_session['email']:
-        return "<script> function myFunction() {alert('You may only edit an album if you created it. Returning to catalog.'); window.location.href='/genre/'}</script><body onload='myFunction()'>"
+        return '''<script> function myFunction() {alert('You may only edit an
+        album if you created it. Returning to catalog.');
+        window.location.href='/genre/'}</script><body onload='myFunction()'>'''
     if request.method == 'POST':
         if request.form['artist']:
             editedAlbum.artist = request.form['artist']
@@ -309,7 +315,10 @@ def deleteAlbum(genre_id, album_id):
     genre = session.query(Genre).filter_by(id=genre_id).one()
     albumToDelete = session.query(Album).filter_by(id=album_id).one()
     if albumToDelete.creator != login_session['email']:
-        return "<script> function myFunction() {alert('You may only delete an album if you created it. Returning to catalog.'); window.location.href='/genre/'}</script><body onload='myFunction()'>"
+        return '''<script> function myFunction() {alert
+        ('You may only delete an album if you created it.
+        Returning to catalog.'); window.location.href='/genre/'}
+        </script><body onload='myFunction()'>'''
     if request.method == 'POST':
         session.delete(albumToDelete)
         session.commit()

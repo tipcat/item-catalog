@@ -34,7 +34,9 @@ class Album(Base):
     description = Column(String(250))
     price = Column(String(8))
     genre_id = Column(Integer, ForeignKey('genre.id'))
-    genre = relationship(Genre, backref=backref('children', cascade='all,delete'))
+    genre = relationship(
+        Genre, backref=backref(
+            'children', cascade='all,delete'))
 
     @property
     def serialize(self):
