@@ -1,0 +1,176 @@
+* {
+	font-family: "Helvetica Neue Bold", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+}
+
+h1 {
+	color: #51453B;
+	font-size: 50px;
+	font-weight: 300;
+	line-height: 60px;
+}
+
+h2 {
+	color: #42C3C9;
+	font-size: 24px;
+	line-height: 29px;
+}
+
+h3 {
+	color: #4A4A4A;
+	font-size: 18px;
+	line-height: 23px;
+}
+
+p {
+	color: #7B7573;
+ 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+ 	font-size: 16px;
+	font-weight: 400;
+ 	line-height: 24px;
+}
+
+strong {
+	color: #7B7573;
+ 	font-size: 16px;
+ 	line-height: 24px;
+}
+
+a {
+	color: #0093B9;
+ 	font-size: 14px;
+ 	line-height: 17px;
+}
+
+.padding-top {
+	padding-top: 30px;
+}
+
+.padding-bottom {
+	padding-bottom: 30px;
+}
+
+.margin-right {
+	margin-right: 30px;
+}
+
+.padding-none {
+	padding: 0;
+}
+
+.btn {
+	border-color: #9FB80A;
+	border-width: 2px;
+	color: #9FB80A;
+	padding: 10px;
+	margin: 0;
+}
+
+.btn:hover {
+	border-color: #9FB80A;
+}
+
+.btn.delete {
+	border-color: #aaaaaa;
+	color: #aaaaaa;
+}
+
+.btn.delete:hover {
+	border-color: #aaaaaa;
+	color: red;
+}
+
+.glyphicon {
+	margin-right: 10px;
+}
+
+.top-album {
+	padding-bottom: 30px;
+	padding-top: 30px;
+}
+
+.top-album p {
+	margin-bottom: 0;
+	line-height: 16px;
+}
+
+.top-album a {
+	color: #7B7573;
+	font-size: 16px;
+	font-weight: 400;
+	margin-bottom: 20;
+	line-height: 16px;
+}
+
+.divider {
+	height: 15px;
+}
+
+.divider.blue {
+	background-color: #42C3C9;
+}
+
+.divider.green {
+	background-color: #9FB80A;
+}
+
+.banner.main {
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 150px;
+}
+
+.banner.album {
+	height: 150px;
+	background-color: #E1E17F;
+}
+
+.banner.profile {
+	height: 150px;
+	background-color: #A6E8EB;
+}
+
+.banner h1 {
+	margin: 45px 0;
+}
+
+.genre-list {
+ 	background-color: #F0F0F0;
+ 	padding: 20px;
+}
+
+.genre-list:hover {
+ 	background-color: #e1e17f;
+ 	padding: 20px;
+}
+
+.album-item {
+	background: #F0F0F0;
+	padding: 20px;
+	margin: 20px;
+	margin-left: -20px;
+}
+
+.album-price {
+	font-weight: 700;
+}
+
+.creator {
+	float:right;
+	margin-top: -20px;
+	padding-right: 20px;
+	text-align: right;
+}
+
+.creator img {
+	border-radius: 50%;
+	width: 100px;
+}
+
+.creator figcaption {
+	color: #7B7573;
+	font-size: 14px;
+	font-weight: 400;
+	margin-top: -20px;
+}
