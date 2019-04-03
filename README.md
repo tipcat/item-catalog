@@ -18,7 +18,7 @@ Once you `vagrant up` and then `vagrant ssh` into your virtual machine, type `cd
 
 Assuming you have cloned this repo you may simply type `python catalog.py` to initiate the server, then open your browser and go to `http://localhost:5000`. You will then be asked to log in with google. You cannot use the application without logging in, and users are automatically signed out after 15 minutes of inactivity. Please be patient as sometimes the various pages will take a short while to load.
 
-If you want to start fresh with a new database, delete the `musiccatalog.db` and `catalog_setup.pyc` files. Then type `python catalog_setup.py` to re-create the database. If you want to load the starter data, type `python catalog.py`.
+If you want to start fresh with a new database, delete the `musiccatalog.db` and `catalog_setup.pyc` files. Then type `python catalog_setup.py` to re-create the database. If you want to load the starter data, type `python music.py`.
 
 Enjoy the application and rock on!
 
